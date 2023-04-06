@@ -1,0 +1,3 @@
+C:/Users/ripid/Desktop/Algorithm/course from foxford/cmake-build-debug/CMakeFiles/course_from_foxford.dir
+C:/Users/ripid/Desktop/Algorithm/course from foxford/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ripid/Desktop/Algorithm/course from foxford/cmake-build-debug/CMakeFiles/rebuild_cache.dir

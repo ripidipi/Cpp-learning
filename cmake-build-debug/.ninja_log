@@ -1,0 +1,27 @@
+# ninja log v5
+3	3368	7022474156512023	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+12	59	6950860848570350	CMakeFiles/course_from_foxford.dir/Models02.cpp.obj	1df11f35d02070d6
+3368	3691	7022474159693340	course_from_foxford.exe	f6a7855fabb3cf51
+1	170	7025093182774342	build.ninja	4a7a391e08725831
+7	321	6950860851187224	CMakeFiles/course_from_foxford.dir/binary_shift.cpp.obj	768de1533cf7d731
+4	345	6950860851448264	CMakeFiles/course_from_foxford.dir/WorkWithTime.cpp.obj	ad70431e052c1801
+8	67	6955090039123065	CMakeFiles/course_from_foxford.dir/Struct.cpp.obj	4e87fea024d1b486
+10	56	6950860848545570	CMakeFiles/course_from_foxford.dir/Models.cpp.obj	81558d5be45e0c72
+7	90	6953826513672143	CMakeFiles/course_from_foxford.dir/DefficultInput.cpp.obj	7f98232eb6c09f48
+6	58	6990432108992941	CMakeFiles/course_from_foxford.dir/hw.cpp.obj	5607bebca276058f
+9	225	6981535216074987	CMakeFiles/course_from_foxford.dir/Pasword_mad.cpp.obj	13638583101b0659
+17	224	6981535216074987	CMakeFiles/course_from_foxford.dir/Q_and_stack.cpp.obj	1c38d6513c901f19
+7	524	6990485997402927	CMakeFiles/course_from_foxford.dir/binserch.cpp.obj	471e864f73a2aa1
+3	52	7016948640051498	CMakeFiles/course_from_foxford.dir/Divicions_check.cpp.obj	47efaa7b6db85caf
+5	85	6984430916809590	CMakeFiles/course_from_foxford.dir/Hecsogram_111253.cpp.obj	8504a364bca4f4ff
+8	62	6989543591635816	CMakeFiles/course_from_foxford.dir/Factoriization_.cpp.obj	a2241ce12afe9f26
+5	44	6989554141106543	CMakeFiles/course_from_foxford.dir/NOD_AND_NOK.cpp.obj	e599a10e395d347a
+10	96	6990210007647434	CMakeFiles/course_from_foxford.dir/binpow.cpp.obj	57426e6382a1b3a3
+6	468	6989589698771097	CMakeFiles/course_from_foxford.dir/Evclid.cpp.obj	6d3814eada5aab65
+8	119	7017968608238395	CMakeFiles/course_from_foxford.dir/Ternarn_search.cpp.obj	c4ef2b38e614eb84
+13	120	7017968608238395	CMakeFiles/course_from_foxford.dir/merging_sort.cpp.obj	e3080a3c479a3137
+11	132	7018791175758404	CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj	7feb805b82ba2aeb
+10	103	7022474123845876	CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj	9c05afc5ab3a205f
+2	188	7025093182774342	build.ninja	4a7a391e08725831
+2	465	7025093188186408	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+465	818	7025093191651185	course_from_foxford.exe	f6a7855fabb3cf51
