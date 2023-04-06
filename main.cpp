@@ -1,17 +1,13 @@
-//#include <iostream>
-//#include <algorithm>
-//#include <vector>
-//#include <cmath>
-//
-//using namespace std;
-//
-//typedef long double ld;
-//typedef long long ll;
-//
-
-// could you rewrite and improve code under: 
 #include <iostream>
+#include <algorithm>
 #include <vector>
+#include <cmath>
+
+using namespace std;
+
+typedef long double ld;
+typedef long long ll;
+
 
 using namespace std;
 
