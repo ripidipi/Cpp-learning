@@ -175,6 +175,18 @@ build CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj: CXX_COMPILER__cou
   OBJECT_DIR = CMakeFiles\course_from_foxford.dir
   OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
 
+build CMakeFiles/course_from_foxford.dir/bin_search_solution.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/bin$ search$ solution.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\bin_search_solution.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/dp.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/dp.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\dp.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target course_from_foxford
@@ -183,7 +195,7 @@ build CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj: CXX_COMPILER__cou
 #############################################
 # Link the executable course_from_foxford.exe
 
-build course_from_foxford.exe: CXX_EXECUTABLE_LINKER__course_from_foxford_Debug CMakeFiles/course_from_foxford.dir/main.cpp.obj CMakeFiles/course_from_foxford.dir/WorkWithTime.cpp.obj CMakeFiles/course_from_foxford.dir/Models.cpp.obj CMakeFiles/course_from_foxford.dir/Models02.cpp.obj CMakeFiles/course_from_foxford.dir/binary_shift.cpp.obj CMakeFiles/course_from_foxford.dir/DefficultInput.cpp.obj CMakeFiles/course_from_foxford.dir/Struct.cpp.obj CMakeFiles/course_from_foxford.dir/hw.cpp.obj CMakeFiles/course_from_foxford.dir/Pasword_mad.cpp.obj CMakeFiles/course_from_foxford.dir/Q_and_stack.cpp.obj CMakeFiles/course_from_foxford.dir/Hecsogram_111253.cpp.obj CMakeFiles/course_from_foxford.dir/Divicions_check.cpp.obj CMakeFiles/course_from_foxford.dir/Factoriization_.cpp.obj CMakeFiles/course_from_foxford.dir/NOD_AND_NOK.cpp.obj CMakeFiles/course_from_foxford.dir/Evclid.cpp.obj CMakeFiles/course_from_foxford.dir/binpow.cpp.obj CMakeFiles/course_from_foxford.dir/binserch.cpp.obj CMakeFiles/course_from_foxford.dir/Ternarn_search.cpp.obj CMakeFiles/course_from_foxford.dir/merging_sort.cpp.obj CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj
+build course_from_foxford.exe: CXX_EXECUTABLE_LINKER__course_from_foxford_Debug CMakeFiles/course_from_foxford.dir/main.cpp.obj CMakeFiles/course_from_foxford.dir/WorkWithTime.cpp.obj CMakeFiles/course_from_foxford.dir/Models.cpp.obj CMakeFiles/course_from_foxford.dir/Models02.cpp.obj CMakeFiles/course_from_foxford.dir/binary_shift.cpp.obj CMakeFiles/course_from_foxford.dir/DefficultInput.cpp.obj CMakeFiles/course_from_foxford.dir/Struct.cpp.obj CMakeFiles/course_from_foxford.dir/hw.cpp.obj CMakeFiles/course_from_foxford.dir/Pasword_mad.cpp.obj CMakeFiles/course_from_foxford.dir/Q_and_stack.cpp.obj CMakeFiles/course_from_foxford.dir/Hecsogram_111253.cpp.obj CMakeFiles/course_from_foxford.dir/Divicions_check.cpp.obj CMakeFiles/course_from_foxford.dir/Factoriization_.cpp.obj CMakeFiles/course_from_foxford.dir/NOD_AND_NOK.cpp.obj CMakeFiles/course_from_foxford.dir/Evclid.cpp.obj CMakeFiles/course_from_foxford.dir/binpow.cpp.obj CMakeFiles/course_from_foxford.dir/binserch.cpp.obj CMakeFiles/course_from_foxford.dir/Ternarn_search.cpp.obj CMakeFiles/course_from_foxford.dir/merging_sort.cpp.obj CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj CMakeFiles/course_from_foxford.dir/bin_search_solution.cpp.obj CMakeFiles/course_from_foxford.dir/dp.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\course_from_foxford.dir

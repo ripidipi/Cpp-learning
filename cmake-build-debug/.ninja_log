@@ -1,8 +1,8 @@
 # ninja log v5
-2	465	7025093188186408	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+2	519	7046586893621573	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
 12	59	6950860848570350	CMakeFiles/course_from_foxford.dir/Models02.cpp.obj	1df11f35d02070d6
-465	818	7025093191651185	course_from_foxford.exe	f6a7855fabb3cf51
-2	188	7025100528008705	build.ninja	4a7a391e08725831
+519	606	7046586894471185	course_from_foxford.exe	8c488c17780a8f43
+2	188	7046600142015441	build.ninja	4a7a391e08725831
 7	321	6950860851187224	CMakeFiles/course_from_foxford.dir/binary_shift.cpp.obj	768de1533cf7d731
 4	345	6950860851448264	CMakeFiles/course_from_foxford.dir/WorkWithTime.cpp.obj	ad70431e052c1801
 8	67	6955090039123065	CMakeFiles/course_from_foxford.dir/Struct.cpp.obj	4e87fea024d1b486
@@ -22,3 +22,4 @@
 13	120	7017968608238395	CMakeFiles/course_from_foxford.dir/merging_sort.cpp.obj	e3080a3c479a3137
 11	132	7018791175758404	CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj	7feb805b82ba2aeb
 10	103	7022474123845876	CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj	9c05afc5ab3a205f
+7	208	7038633877046258	CMakeFiles/course_from_foxford.dir/bin_search_solution.cpp.obj	b6783ea0adcd83e8
