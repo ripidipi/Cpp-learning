@@ -23,3 +23,14 @@
 11	132	7018791175758404	CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj	7feb805b82ba2aeb
 10	103	7022474123845876	CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj	9c05afc5ab3a205f
 7	208	7038633877046258	CMakeFiles/course_from_foxford.dir/bin_search_solution.cpp.obj	b6783ea0adcd83e8
+7	47	7046617552754173	CMakeFiles/course_from_foxford.dir/dp.cpp.obj	49219982e48ddc1d
+3	561	7046617557896376	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+561	652	7046617558787101	course_from_foxford.exe	287375ee3b1130aa
+7	47	7046640327886801	CMakeFiles/course_from_foxford.dir/dp.cpp.obj	49219982e48ddc1d
+3	606	7046640333478116	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+606	695	7046640334341183	course_from_foxford.exe	287375ee3b1130aa
+2	621	7046642745654557	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+621	708	7046642746506667	course_from_foxford.exe	287375ee3b1130aa
+8	50	7046649932852940	CMakeFiles/course_from_foxford.dir/dp.cpp.obj	49219982e48ddc1d
+4	588	7046649938221009	CMakeFiles/course_from_foxford.dir/main.cpp.obj	534fe47dfcaf8b8c
+588	881	7046649941121427	course_from_foxford.exe	287375ee3b1130aa

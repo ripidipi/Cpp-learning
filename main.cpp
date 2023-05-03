@@ -4,6 +4,7 @@
 #include <cmath>
 #include <string>
 #include <fstream>
+#include <numeric>
 
 using namespace std;
 
@@ -15,27 +16,21 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int n;
-    ll c, k;
-    cin >> n >> c >> k;
-    ll Mod = pow((ll)10, k);
-    string s;
-    cin >> s;
-    vector<ll> dp(n);
-    for (int i = 0; i < n; ++i) {
-        if (i < 10) {
-            string cur = s.substr(0, i + 1);
-            if (stoll(cur) <= c && (i == 0 || cur[0] != '0')) {
-                dp[i]++;
+    cin >> n;
+    vector<vector<int>> dp(n, vector<int>(10));
+    dp[0] = vector<int>(10, 1);
+    dp[0][0] = 0;
+    for (int i = 1; i < n; ++i) {
+        for (int j = 0; j < 10; ++j) {
+            if (j > 0) {
+                dp[i][j] += dp[i - 1][j - 1];
             }
-        }
-        for (int j = i; j >=max(1, i - 10); --j) {
-            string cur = s.substr(j, i - j + 1);
-            if (stoll(cur) <= c && (i == j || cur[0] != '0')) {
-                dp[i] += dp[j - 1];
-                dp[i] %= Mod;
+            dp[i][j] += dp[i - 1][j];
+            if (j<9) {
+                dp[i][j] += dp[i -1][j + 1];
             }
         }
     }
-    cout << dp[n - 1] << '\n';
+    cout << accumulate(dp[n - 1].begin(), dp[n - 1].end(), 0) << '\n';
     return 0;
 }
