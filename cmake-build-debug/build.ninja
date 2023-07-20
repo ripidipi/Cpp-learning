@@ -187,6 +187,96 @@ build CMakeFiles/course_from_foxford.dir/dp.cpp.obj: CXX_COMPILER__course_from_f
   OBJECT_DIR = CMakeFiles\course_from_foxford.dir
   OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
 
+build CMakeFiles/course_from_foxford.dir/laberinth.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/laberinth.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\laberinth.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/Tarifi_1090.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/Tarifi$ 1090.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\Tarifi_1090.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/backpack.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/backpack.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\backpack.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/NVP.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/NVP.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\NVP.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/PSP.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/PSP.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\PSP.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/pref_sum.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/pref_sum.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\pref_sum.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/Sparse_table_.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/Sparse$ table$ .cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\Sparse_table_.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/decomposition.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/decomposition.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\decomposition.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/Mo.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/Mo.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\Mo.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/bin_tree.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/bin_tree.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\bin_tree.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/Chess_6th.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/Chess$ 6th.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\Chess_6th.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/scan_line.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/scan$ line.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\scan_line.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/graph_condensation.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/graph$ condensation.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\graph_condensation.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/briges_in_grapth.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/briges$ in$ grapth.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\briges_in_grapth.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
+build CMakeFiles/course_from_foxford.dir/0-1_BFS.cpp.obj: CXX_COMPILER__course_from_foxford_Debug C$:/Users/ripid/Desktop/Algorithm/course$ from$ foxford/0-1$ BFS.cpp || cmake_object_order_depends_target_course_from_foxford
+  DEP_FILE = CMakeFiles\course_from_foxford.dir\0-1_BFS.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\course_from_foxford.dir
+  OBJECT_FILE_DIR = CMakeFiles\course_from_foxford.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target course_from_foxford
@@ -195,7 +285,7 @@ build CMakeFiles/course_from_foxford.dir/dp.cpp.obj: CXX_COMPILER__course_from_f
 #############################################
 # Link the executable course_from_foxford.exe
 
-build course_from_foxford.exe: CXX_EXECUTABLE_LINKER__course_from_foxford_Debug CMakeFiles/course_from_foxford.dir/main.cpp.obj CMakeFiles/course_from_foxford.dir/WorkWithTime.cpp.obj CMakeFiles/course_from_foxford.dir/Models.cpp.obj CMakeFiles/course_from_foxford.dir/Models02.cpp.obj CMakeFiles/course_from_foxford.dir/binary_shift.cpp.obj CMakeFiles/course_from_foxford.dir/DefficultInput.cpp.obj CMakeFiles/course_from_foxford.dir/Struct.cpp.obj CMakeFiles/course_from_foxford.dir/hw.cpp.obj CMakeFiles/course_from_foxford.dir/Pasword_mad.cpp.obj CMakeFiles/course_from_foxford.dir/Q_and_stack.cpp.obj CMakeFiles/course_from_foxford.dir/Hecsogram_111253.cpp.obj CMakeFiles/course_from_foxford.dir/Divicions_check.cpp.obj CMakeFiles/course_from_foxford.dir/Factoriization_.cpp.obj CMakeFiles/course_from_foxford.dir/NOD_AND_NOK.cpp.obj CMakeFiles/course_from_foxford.dir/Evclid.cpp.obj CMakeFiles/course_from_foxford.dir/binpow.cpp.obj CMakeFiles/course_from_foxford.dir/binserch.cpp.obj CMakeFiles/course_from_foxford.dir/Ternarn_search.cpp.obj CMakeFiles/course_from_foxford.dir/merging_sort.cpp.obj CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj CMakeFiles/course_from_foxford.dir/bin_search_solution.cpp.obj CMakeFiles/course_from_foxford.dir/dp.cpp.obj
+build course_from_foxford.exe: CXX_EXECUTABLE_LINKER__course_from_foxford_Debug CMakeFiles/course_from_foxford.dir/main.cpp.obj CMakeFiles/course_from_foxford.dir/WorkWithTime.cpp.obj CMakeFiles/course_from_foxford.dir/Models.cpp.obj CMakeFiles/course_from_foxford.dir/Models02.cpp.obj CMakeFiles/course_from_foxford.dir/binary_shift.cpp.obj CMakeFiles/course_from_foxford.dir/DefficultInput.cpp.obj CMakeFiles/course_from_foxford.dir/Struct.cpp.obj CMakeFiles/course_from_foxford.dir/hw.cpp.obj CMakeFiles/course_from_foxford.dir/Pasword_mad.cpp.obj CMakeFiles/course_from_foxford.dir/Q_and_stack.cpp.obj CMakeFiles/course_from_foxford.dir/Hecsogram_111253.cpp.obj CMakeFiles/course_from_foxford.dir/Divicions_check.cpp.obj CMakeFiles/course_from_foxford.dir/Factoriization_.cpp.obj CMakeFiles/course_from_foxford.dir/NOD_AND_NOK.cpp.obj CMakeFiles/course_from_foxford.dir/Evclid.cpp.obj CMakeFiles/course_from_foxford.dir/binpow.cpp.obj CMakeFiles/course_from_foxford.dir/binserch.cpp.obj CMakeFiles/course_from_foxford.dir/Ternarn_search.cpp.obj CMakeFiles/course_from_foxford.dir/merging_sort.cpp.obj CMakeFiles/course_from_foxford.dir/siple_dp.cpp.obj CMakeFiles/course_from_foxford.dir/mad_with_bin.cpp.obj CMakeFiles/course_from_foxford.dir/bin_search_solution.cpp.obj CMakeFiles/course_from_foxford.dir/dp.cpp.obj CMakeFiles/course_from_foxford.dir/laberinth.cpp.obj CMakeFiles/course_from_foxford.dir/Tarifi_1090.cpp.obj CMakeFiles/course_from_foxford.dir/backpack.cpp.obj CMakeFiles/course_from_foxford.dir/NVP.cpp.obj CMakeFiles/course_from_foxford.dir/PSP.cpp.obj CMakeFiles/course_from_foxford.dir/pref_sum.cpp.obj CMakeFiles/course_from_foxford.dir/Sparse_table_.cpp.obj CMakeFiles/course_from_foxford.dir/decomposition.cpp.obj CMakeFiles/course_from_foxford.dir/Mo.cpp.obj CMakeFiles/course_from_foxford.dir/bin_tree.cpp.obj CMakeFiles/course_from_foxford.dir/Chess_6th.cpp.obj CMakeFiles/course_from_foxford.dir/scan_line.cpp.obj CMakeFiles/course_from_foxford.dir/graph_condensation.cpp.obj CMakeFiles/course_from_foxford.dir/briges_in_grapth.cpp.obj CMakeFiles/course_from_foxford.dir/0-1_BFS.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\course_from_foxford.dir

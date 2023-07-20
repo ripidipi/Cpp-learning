@@ -161,3 +161,105 @@
 //    return 0;
 //}
 
+
+//struct Gangster{
+//    int t, w;
+//    ll c;
+//    Gangster() {};
+//    Gangster(int t, int w, ll c): t(t), w(w), c(c) {};
+//
+//};
+//
+//bool operator <(const Gangster& a, const Gangster& b) {
+//    return a.t < b.t;
+//}
+//
+//int main() {
+//    ios_base::sync_with_stdio(false);
+//    cin.tie(0);
+//    int n, k, t;
+//    cin >> n >> k >> t;
+//    vector<Gangster> g(n);
+//    for (int i = 0; i < n; ++i) {
+//        cin >> g[i].t;
+//    }
+//    for (int i = 0; i < n; ++i) {
+//        cin >> g[i].c;
+//    }
+//    for (int i = 0; i < n; ++i) {
+//        cin >> g[i].w;
+//    }
+//    sort(g.begin(), g.end());
+//    vector<ll> dp(n);
+//    vector<bool> can(n, false);
+//    for (int i = 0; i < n; ++i) {
+//        if (g[i].w <= g[i].t) {
+//            dp[i] = g[i].c;
+//            can[i] = true;
+//        }
+//        for (int j = 0; j < i; ++j) {
+//            if (can[j] &&  g[i].t - g[j].t >= abs(g[i].w - g[j].w)) {
+//                dp[i] = max(dp[i], dp[j] + g[i].c);
+//            }
+//        }
+//    }
+//    cout << *max_element(dp.begin(), dp.end()) << '\n';
+//
+//    return 0;
+//
+//}
+
+
+
+
+//ll psp(int n, int k) {
+//    vector<vector<ll>> dp(n + 1, vector<ll>(k+1));
+//    dp[0][0] = 1;
+//    for (int i = 1; i <= n; ++i) {
+//        for (int j = 0; j <= k; ++j) {
+//            if (j > 0) {
+//                dp[i][j] += dp[i-1][j-1];
+//            }
+//            if (j < k) {
+//                dp[i][j] +=dp[i - 1][j + 1];
+//            }
+//            dp[i][j] %= Mod;
+//        }
+//    }
+//    return dp[n][0];
+//}
+//
+
+
+
+//int main() {
+//    ios_base::sync_with_stdio(false);
+//    cin.tie(0);
+//    int n, k;
+//    cin >> n >> k;
+//    if (n > 0 && k == 2) {
+//        cout << 2;
+//        return 0;
+//    } else if (n < k) {
+//        cout << pow(2, n);
+//        return 0;
+//    }
+//    vector<pair<int, int>> dp(n+1, make_pair(0, 0));
+//    dp[0].first = 0;
+//    dp[0].second = 0;
+//    for (int i = 1; i <= k; ++i) {
+//        dp[i].first = pow(2, (i - 1));
+//        dp[i].second = pow(2, (i - 1));
+//        for (int i = k; i <= n; ++i) {
+//            int curf=0, curs=0;
+//            for (int j = 1; j < k; ++j) {
+//                curf += dp[i - j].second;
+//                curs += dp[i - j].first;
+//            }
+//            dp[i].first = curf;
+//            dp[i].second = curs;
+//        }
+//    }
+//    cout << dp[n].first + dp[n].second;
+//    return 0;
+//}

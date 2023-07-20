@@ -1,36 +1,45 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
-#include <cmath>
-#include <string>
-#include <fstream>
-#include <numeric>
+#include <algorithm>
+#include <queue>
+#include <deque>
 
 using namespace std;
-
-typedef long double ld;
 typedef long long ll;
 
+const int INF = 1e9;
 
-int main() {
+int main () {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-    int n;
-    cin >> n;
-    vector<vector<int>> dp(n, vector<int>(10));
-    dp[0] = vector<int>(10, 1);
-    dp[0][0] = 0;
-    for (int i = 1; i < n; ++i) {
-        for (int j = 0; j < 10; ++j) {
-            if (j > 0) {
-                dp[i][j] += dp[i - 1][j - 1];
-            }
-            dp[i][j] += dp[i - 1][j];
-            if (j<9) {
-                dp[i][j] += dp[i -1][j + 1];
+    int n, m;
+    cin >> n >> m;
+    vector<vector<pair<int, int>>> gr(n);
+    for (int i = 0; i < m; ++i) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        u--; v--;
+        gr[u].push_back({v, w});
+        gr[v].push_back({u, w});
+    }
+    int start = 0;
+    vector<int> d(n, INF);
+    deque<int> q;
+    d[start] = 0;
+    q.push_back(start);
+    while (!q.empty()) {
+        int v = q.front();
+        q.pop_front();
+        for (auto &e: gr[v]) {
+            int u = e.first, w = e.second;
+            if (d[u] > d[v] + w) {
+                if (w == 0) {
+                    q.push_front(u);
+                } else {
+                    q.push_back(u);
+                }
             }
         }
     }
-    cout << accumulate(dp[n - 1].begin(), dp[n - 1].end(), 0) << '\n';
     return 0;
 }
