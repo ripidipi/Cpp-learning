@@ -444,194 +444,169 @@
 //}
 
 
+//
+//
 //#include <iostream>
 //#include <vector>
-//#include <unordered_map>
+//#include <algorithm>
+//#include <cmath>
 //
 //using namespace std;
+//typedef long long ll;
 //
 //
-//void town_rec(vector<vector<char>>& box, vector<vector<bool>>& state, int n, int m, int i, int j) {
-//    if (j - 1 > -1 && (box[i][j - 1] == '#' || (box[i][j - 1] > 64 && box[i][j - 1] < 90)) && state[i][j - 1]) {
-//        state[i][j - 1] = false;
-//        town_rec(box, state, n, m, i, j - 1);
+//struct Block {
+//    vector<int> arr;
+//    int len;
+//    void build () {
+//        len = arr.size();
 //    }
-//    if (i - 1 > -1 && (box[i - 1][j] == '#' || (box[i - 1][j] > 64 && box[i - 1][j] < 90)) && state[i - 1][j]) {
-//        state[i - 1][j] = false;
-//        town_rec(box, state, n, m, i - 1, j);
-//    }
-//    if (i + 1 < n && (box[i + 1][j] == '#' || (box[i + 1][j] > 64 && box[i + 1][j] < 90)) && state[i + 1][j]) {
-//        state[i + 1][j] = false;
-//        town_rec(box, state, n, m, i + 1, j);
-//    }
-//    if (j + 1 < m && (box[i][j + 1] == '#' || (box[i][j + 1] > 64 && box[i][j + 1] < 90)) && state[i][j + 1]) {
-//        state[i][j + 1] = false;
-//        town_rec(box, state, n, m, i, j + 1);
-//    }
-//}
-//
-//int field_rec(vector<vector<char>>& box, vector<vector<bool>>& state, vector<vector<bool>>& tmp,
-//              int n, int m, int i, int j, int summ, unordered_map<char, int>& owner) {
-//    if ((box[i][j] == '.' || (box[i][j] > 64 && box[i][j] < 90)) && state[i][j]) {
-//        state[i][j] = false;
-//        if (i + 1 < n && state[i + 1][j]) {
-//            summ = field_rec(box, state, tmp, n, m, i + 1, j, summ, owner);
+//    int partSum (int l, int r) {
+//        int c = 0;
+//        for (int i = l; i <= r; ++i) {
+//            c += arr[i];
 //        }
-//        if (j + 1 < m && state[i][j + 1]) {
-//            summ = field_rec(box, state, tmp, n, m, i, j + 1, summ, owner);
+//        return c;
+//    }
+//    int fullSum () {
+//        int c = 0;
+//        for (int i = 0; i < len; ++i) {
+//            c += arr[i];
 //        }
-//        if (i - 1 > -1) {
-//            if (state[i - 1][j])
-//                summ = field_rec(box, state, tmp, n, m, i - 1, j, summ, owner);
-//            else if (box[i - 1][j] == '#' && tmp[i - 1][j]) {
-//                tmp[i - 1][j] = false;
-//                town_rec(box, tmp, n, m, i - 1, j);
-//                summ += 3;
+//        return c;
+//    }
+//    vector<int> slice(int l, int r) {
+//        vector<int> cur;
+//        for (int i = l; i <= r; ++i) {
+//            cur.push_back(arr[i]);
+//        }
+//        return cur;
+//    }
+//    vector<int> fullget() {
+//        return arr;
+//    }
+//    vector<int> partget(int l, int r) {
+//        return slice(l, r);
+//    }
+//    void partChange (int l, int r, vector<int>& a, int j) {
+//        for (int i = l; i <= r; ++i) {
+//            arr[i] = a[j];
+//            j++;
+//        }
+//    }
+//};
+//struct Q {
+//    vector<Block> bl;
+//    int len, sz;
+//    Q(){}
+//    Q(vector<int>& a) {
+//        int n = a.size();
+//        len = sqrt(n);
+//        sz = 0;
+//        for (int i = 0; i < n; ++i) {
+//            int b = i / len;
+//            if (b == sz) {
+//                bl.push_back(Block());
+//                sz++;
 //            }
+//            bl[b].arr.push_back(a[i]);
 //        }
-//        if (j - 1 > -1) {
-//            if (state[i][j - 1])
-//                summ = field_rec(box, state, tmp, n, m, i, j - 1, summ, owner);
-//            else if (box[i][j - 1] == '#' && tmp[i][j - 1]) {
-//                tmp[i][j - 1] = false;
-//                town_rec(box, tmp, n, m, i, j - 1);
-//                summ += 3;
+//        for (int i = 0; i < sz; ++i) {
+//            bl[i].build();
+//        }
+//    }
+//    int summ(int l, int r) {
+//        int posl = l / len, posinl = l % len;
+//        int posr = r / len, posinr = r % len;
+//        if (posl == posr) {
+//            return bl[posl].partSum(posinl, posinr);
+//        }
+//        int ans = 0;
+//        if (posinl != 0) {
+//            ans += bl[posl].partSum(posinl, bl[posl].len - 1);
+//            posl++;
+//        }
+//        if (posinr != bl[posr].len - 1) {
+//            ans += bl[posr].partSum(0, posinr);
+//            posr--;
+//        }
+//        for (int i = posl; i <= posr; ++i) {
+//            ans += bl[i].fullSum();
+//        }
+//        return ans;
+//    }
+//    vector<int> getArr (int l, int r) {
+//        vector<int> splt;
+//        int posl = l / len, posinl = l % len;
+//        int posr = r / len, posinr = r % len;
+//        vector<int> curpref, cursuff;
+//        if (posl == posr) {
+//            splt = bl[posl].partget(posinl, posinr);
+//            return splt;
+//        }
+//
+//        if (posinl != 0) {
+//            curpref = bl[posl].partget(posinl, bl[posl].len - 1);
+//            posl++;
+//        }
+//        if (posinr != bl[posr].len - 1) {
+//            cursuff = bl[posr].partget(0, posinr);
+//            posr--;
+//        }
+//        splt.insert(splt.end(), curpref.begin(), curpref.end());
+//        for (int i = posl; i <= posr; ++i) {
+//            curpref = bl[i].fullget();
+//            splt.insert(splt.end(), curpref.begin(), curpref.end());
+//        }
+//        splt.insert(splt.end(), cursuff.begin(), cursuff.end());
+//        return splt;
+//    }
+//    void turn(int l, int r) {
+//        vector<int> arr = getArr(l, r);
+//        int j = 0;
+//        reverse(arr.begin(), arr.end());
+//        int posl = l / len, posinl = l % len;
+//        int posr = r / len, posinr = r % len;
+//        if (posl == posr) {
+//            bl[posl].partChange(posinl, posinr, arr, j);
+//            return;
+//        }
+//        if (posinl != 0) {
+//            bl[posl].partChange(posinl, bl[posl].len - 1, arr, j);
+//            j += bl[posl].len - posinl;
+//            posl++;
+//        }
+//        for (int i = posl; i <= posr; ++i) {
+//            if ((posinr != bl[posr].len - 1) && i == posr) {
+//                bl[posr].partChange(0, posinr, arr, j);
+//                j += posinr;
 //            }
-//        }
-//        if (box[i][j] > 64 && box[i][j] < 90) {
-//            owner[box[i][j]] ++;
-//            state[i][j] = true;
+//            bl[i].partChange(0, bl[i].len, arr, j);
+//            j += bl[i].len - 1;
 //        }
 //    }
-//    if (box[i][j] == '#' && tmp[i][j]) {
-//        tmp[i][j] = false;
-//        town_rec(box, tmp, n, m, i, j);
-//        summ += 3;
-//    }
-//    return summ;
-//}
 //
-//void field_check(vector<vector<char>>& box, vector<vector<bool>>& state,
-//                 int n, int m, int i, int j, unordered_map<char, int>& ans) {
-//    vector<vector<bool>> tmp(n, vector<bool>(m, true));
-//    unordered_map<char, int> owner = {{ 'R', 0}, {'Y', 0}, {'G', 0}, {'B', 0}, {'K', 0}};
-//    int summ = field_rec(box, state, tmp, n, m, i, j, 0, owner);
-//
-//    vector<char> keys;
-//    int maxx = 1;
-//    for (const auto& pair: owner) {
-//        if (pair.second > maxx) {
-//            keys.clear();
-//            keys.push_back(pair.first);
-//            maxx = pair.second;
-//        } else if (pair.second == maxx) {
-//            keys.push_back(pair.first);
-//        }
-//    }
-//    for (auto key: keys) {
-//        ans[key] += summ;
-//    }
-//}
-//
-//int obj_rec(vector<vector<char>>& box, vector<vector<bool>>& state,
-//            int n, int m, int i, int j, int summ, unordered_map<char, int>& owner, char type) {
-//    if ((box[i][j] == type || (box[i][j] > 64 && box[i][j] < 90)) && state[i][j]) {
-//        state[i][j] = false;
-//        summ += 1;
-//        if (i + 1 < n && state[i + 1][j]) {
-//            summ = obj_rec(box, state, n, m, i + 1, j, summ, owner, type);
-//        }
-//        if (j + 1 < m && state[i][j + 1]) {
-//            summ = obj_rec(box, state, n, m, i, j + 1, summ, owner, type);
-//        }
-//        if (i - 1 > -1 && state[i - 1][j]) {
-//            summ = obj_rec(box, state, n, m, i - 1, j, summ, owner, type);
-//        }
-//        if (j - 1 > -1 && state[i][j - 1]) {
-//            summ = obj_rec(box, state, n, m, i, j - 1, summ, owner, type);
-//        }
-//        if (box[i][j] > 64 && box[i][j] < 90) {
-//            owner[box[i][j]] ++;
-//            state[i][j] = true;
-//            summ --;
-//        }
-//    }
-//    return summ;
-//}
-//
-//void obj_check(vector<vector<char>>& box, vector<vector<bool>>& state,
-//               int n, int m, int i, int j, unordered_map<char, int>& ans, char type) {
-//    unordered_map<char, int> owner = {{ 'R', 0}, {'Y', 0}, {'G', 0}, {'B', 0}, {'K', 0}};
-//    int summ = obj_rec(box, state, n, m, i, j, 0, owner, type);
-//
-//    vector<char> keys;
-//    int maxx = 1;
-//    for (const auto& pair: owner) {
-//        if (pair.second > maxx) {
-//            keys.clear();
-//            keys.push_back(pair.first);
-//            maxx = pair.second;
-//        } else if (pair.second == maxx) {
-//            keys.push_back(pair.first);
-//        }
-//    }
-//    for (auto key: keys) {
-//        ans[key] += summ;
-//    }
-//}
+//};
 //
 //
-//int main () {
-//    ios_base::sync_with_stdio(false);
+//int main() {
+//    ios_base::sync_with_stdio(0);
 //    cin.tie(0);
 //    int n, m;
 //    cin >> n >> m;
-//    vector<vector<char>> box(n, vector<char>(m));
+//    vector<int> a(n);
 //    for (int i = 0; i < n; ++i) {
-//        for (int j = 0; j < m; ++j) {
-//            cin >> box[i][j];
+//        cin >> a[i];
+//    }
+//    Q s(a);
+//    for (int i = 0; i < m; ++i) {
+//        int q, l, r;
+//        cin >> q >> l >> r;
+//        l--, r--;
+//        if (q == 0) {
+//            cout << s.summ(l, r) << '\n';
+//        } else {
+//            s.turn(l, r);
 //        }
 //    }
-//    unordered_map<char, int> ans = {{ 'R', 0}, {'Y', 0}, {'G', 0}, {'B', 0}, {'K', 0}};
-//    vector<vector<bool>>  state(n, vector<bool>(m, true));
-//    for (int i = 0; i < n; ++i) {
-//        for (int j = 0; j < m; ++j) {
-//            if (state[i][j]) {
-//                if (box[i][j] == '.') {
-//                    field_check(box, state, n, m, i, j, ans);
-//                } else if (box[i][j] == '#' || box[i][j] == '+') {
-//                    obj_check(box, state, n, m, i, j, ans, box[i][j]);
-//                }
-//                state[i][j] = false;
-//                if (box[i][j] > 64 && box[i][j] < 90) {
-//                    state[i][j] = true;
-//                }
-//            }
-//        }
-//    }
-//    vector<char> keys;
-//    int maxx = 1;
-//    for (const auto& pair: ans) {
-//        if (pair.second > maxx) {
-//            keys.clear();
-//            keys.push_back(pair.first);
-//            maxx = pair.second;
-//        } else if (pair.second == maxx) {
-//            keys.push_back(pair.first);
-//        }
-//    }
-//    cout << maxx << '\n';
-//    for (char i: keys) {
-//        cout << i << ' ';
-//    }
-//    return 0;
-//}
-//
-//
-////4 4
-////R##.
-////##..
-////...Y
-////R##.
-
-
+// }
