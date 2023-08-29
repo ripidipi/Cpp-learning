@@ -7,77 +7,130 @@
 #include <map>
 #include <set>
 #include <cmath>
-
-
+#include <random>
 #define all(a) a.begin(), a.end()
-using namespace std;
 
+using namespace std;
 
 const double eps = 1e-7;
 const int INF = 1e9;
-
-
+const int MAXSIZE = 1e5 + 5;
 typedef long double ld;
 typedef long long ll;
 
-vector<vector<pair<int, int>>> gr;
-vector<int> parent;
-vector<int> sizee;
+random_device rd;
+mt19937 gen(rd());
+uniform_int_distribution<> distr(1, (int)1e9);
 
+inline int superRand() {
+    return distr(gen);
+}
 
-int find_set(int v) {
-    if(v == parent[v]) {
-        return v;
+struct node {
+    int val, prior, sz;
+    node *l, *r;
+    node() :l(nullptr), r(nullptr) {};
+    node(int val) :val(val), prior(superRand()), l(nullptr), r(nullptr), sz(1) {}
+};
+
+node nodes[MAXSIZE];
+int sz = 0;
+
+inline node* getNode(int x) {
+    nodes[sz] = node(x);
+    return &nodes[sz++];
+}
+
+inline int getSz(node* root) {
+    return (root ? root->sz : 0);
+}
+
+inline void update(node* root) {
+    if (root) {
+        root->sz = getSz(root->l) + getSz(root->r) + 1;
     }
-    return parent[v] = find_set(parent[v]);
 }
 
-
-void make_set(int v) {
-    parent[v] = v;
-    sizee[v] = 1;
-}
-
-
-void unite_sets(int a, int b) {
-    a = find_set(a);
-    b = find_set(b);
-    if (a != b) {
-        if (sizee[a] < sizee[b]) {
-            swap(a, b);
-        }
-        parent[b] = a;
-        sizee[a] += sizee[b];
+void split(node* root, node*& l, node*& r, int k) {
+    if (!root) {
+        l = r = nullptr;
+        return;
+    }
+    if(getSz(root->l) >= k) {
+        split(root->l, l, root->l, k);
+        r = root;
+        update(r);
+    } else {
+        split(root->r, root->r, r, k - getSz(root->l) - 1);
+        l = root;
+        update(l);
     }
 }
 
+void merge(node*& root, node* l, node* r) {
+    if(!l || !r) {
+        root = (l ? l: r);
+        return;
+    }
+    if(l->prior > r->prior) {
+        merge(l->r, l->r, r);
+        root = l;
+    } else {
+        merge(r->l, l, r->l);
+        root = r;
+    }
+    update(root);
+}
+
+node *tmp1, *tmp2, *tmp3;
+
+void insert(node*& root, int pos, int val) {
+    node *ins = getNode(val);
+    split(root, tmp1, tmp2, pos);
+    merge(root, tmp1, ins);
+    merge(root, root, tmp2);
+}
+
+void erase(node* root, int pos) {
+    split(root, tmp1, tmp2, pos);
+    split(tmp2, tmp2, tmp3, 1);
+    merge(root, tmp1, tmp3);
+}
+
+void print(node* root) {
+    if(!root) {
+        return;
+    }
+    print(root->l);
+    cout << root->val << ' ';
+    print(root->r);
+}
 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
+    node* root = nullptr;
     int n, m;
     cin >> n >> m;
-    gr.resize(n);
-    parent.resize(n, -1);
-    sizee.resize(n);
-    for (int i = 0; i < m; ++i) {
-        int u, v, w;
-        cin >> u >> v >> w;
-        u--; v--;
-        gr[u].push_back({v, w});
-        gr[v].push_back({u, w});
+    for (int i = 1; i <= n; ++i) {
+        node* ins = getNode(i);
+        merge(root, root, ins);
     }
-    for (int i = 0; i < n; ++i) {
-        make_set(i);
-    }
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < gr[i].size(); ++j) {
-            if (find_set(gr[i][j]) == gr[i][j] && gr[i][j] > i) {
-              unite_sets(gr[i][j], i);
-              cout << i + 1 << ' ' << gr[i][j] + 1 << '\n';
-            }
+     for(int i = 0; i < m; ++i) {
+        int l, r;
+        cin >> l >> r;
+        split(root, tmp1, tmp3, r);
+        split(tmp1, tmp1, tmp2, l - 1);
+        merge(tmp2, tmp2, tmp1);
+        merge(root, tmp2, tmp3);
         }
-    }
+    print(root);
+    cout << endl;
     return 0;
 }
+
+
+
+
+

@@ -825,3 +825,98 @@
 //
 //    return 0;
 //}
+
+
+
+
+
+
+//#include <iostream>
+//#include <vector>
+//#include <chrono>
+//#include <string>
+//#include <algorithm>
+//#include <numeric>
+//#include <map>
+//#include <set>
+//#include <cmath>
+//#define all(a) a.begin(), a.end()
+//
+//using namespace std;
+//
+//
+//const double eps = 1e-7;
+//const int INF = 1e9;
+//const int MAX = 1e5;
+//
+//typedef long double ld;
+//typedef long long ll;
+//
+//vector<int> tr(MAX * 8);
+//
+//
+//
+//void build(int v, int l, int r, vector<int>& a) {
+//    if (l == r - 1) {
+//        tr[v] = a[l];
+//        return;
+//    }
+//    int m = (l + r) / 2;
+//    build(2 * v + 1, l, m, a);
+//    build(2 * v + 2, m, r, a);
+//    tr[v] = max(tr[2 * v + 1], tr[2 * v + 2]);
+//}
+//
+//int get_(int v, int askl, int askr, int l, int r) {
+//    if (l >= askr || r <= askl) {
+//        return -INF;
+//    }
+//    if (l <= askl && r >= askr) {
+//        return tr[v];
+//    }
+//    int m = (askl + askr) / 2;
+//    auto res1 = get_(2 * v + 1, askl, m, l, r);
+//    auto res2 = get_(2 * v + 2, m, askr, l, r);
+//    return max(res1, res2);
+//}
+//
+//void change(int v, int l, int r, int ind, int val) {
+//    if (l == r - 1) {
+//        tr[v] = val;
+//        return;
+//    }
+//    int m = (l + r) / 2;
+//    if (ind < m) {
+//        change(2 * v + 1, l, m, ind, val);
+//    } else {
+//        change(2 * v + 2, m, r, ind, val);
+//    }
+//    tr[v] = max(tr[2 * v + 1], tr[2 * v + 2]);
+//}
+//
+//int main() {
+//    ios_base::sync_with_stdio(false);
+//    cin.tie(0);
+//    cout.tie(0);
+//    int n;
+//    cin >> n;
+//    vector<int> arr(n);
+//    for (int i = 0; i < n; ++i) {
+//        cin >> arr[i];
+//    }
+//    build(0, 0, n, arr);
+//    int m;
+//    cin >> m;
+//    for (int i = 0; i < m; ++i) {
+//        char type;
+//        int l, r;
+//        cin >> type >> l >> r;
+//        l --;
+//        if (type == 's') {
+//            cout << get_(0, 0, n, l, r) << '\n';
+//        } else {
+//            change(0, 0, n, l, r);
+//        }
+//    }
+//    return 0;
+//}
