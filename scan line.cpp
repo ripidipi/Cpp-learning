@@ -164,3 +164,118 @@
 //    }
 //    return 0;
 //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//#include <iostream>
+//#include <vector>
+//#include <chrono>
+//#include <string>
+//#include <algorithm>
+//#include <numeric>
+//#include <map>
+//#include <set>
+//#include <cmath>
+//#include <random>
+//#define all(a) a.begin(), a.end()
+//
+//using namespace std;
+//
+//const double eps = 1e-7;
+//const int INF = 1e9;
+//const int MAXSIZE = 1e5 + 5;
+//typedef long double ld;
+//typedef long long ll;
+//
+//struct Event {
+//    int x, type;
+//    int num;
+//    int y1, y2;
+//    Event(){};
+//    Event(int x, int type, int num, int y1, int y2) :x(x), type(type), num(num), y1(y1), y2(y2) {}
+//};
+//
+//bool operator <(const Event& a, const Event& b) {
+//    return make_pair(a.x, a.type) < make_pair(b.x, b.type);
+//}
+//
+//int t[4 * MAXSIZE];
+//
+//int ask(int v, int l, int r, int askl, int askr) {
+//    if (l >= askr || r <= askl) {
+//        return 0;
+//    }
+//    if (l >= askl && r <= askr) {
+//        return t[v];
+//    }
+//    int m = (l + r) / 2;
+//    auto val1 = ask(2 * v + 1, l, m, askl, askr);
+//    auto val2 = ask(2 * v + 2, m, r, askl, askr);
+//    return val1 + val2;
+//}
+//
+//void add(int v, int l, int r, int pos) {
+//    if (l == r - 1) {
+//        t[l]++;
+//        return;
+//    }
+//    int m = (l + r) / 2;
+//    if (m > pos) {
+//        add(2 * v + 1, l, m, pos);
+//    } else {
+//        add(2 * v + 2, m, r, pos);
+//    }
+//}
+//
+//int main() {
+//    ios_base::sync_with_stdio(false);
+//    cin.tie(0);
+//    cout.tie(0);
+//    vector<Event> ev;
+//    int n;
+//    cin >> n;
+//    for (int i = 0; i < n; ++i) {
+//        int x1, x2, y1, y2;
+//        cin >> x1 >> x2 >> y1 >> y2;
+//        ev.push_back(Event(x1, 0, i, y1, y2));
+//        ev.push_back(Event(x2, 2, i, y1, y2));
+//    }
+//    int m;
+//    cin >> m;
+//    for (int i = 0; i < n; ++i) {
+//        int x, y;
+//        cin >> x >> y;
+//        ev.push_back(Event(x, 1, -1, y, -1 ));
+//    }
+//    sort(all(ev));
+//    int cnt = 0;
+//    vector<int> pref(n), ans(n);
+//    for (auto& e: ev) {
+//        if(e.type == 0) {
+//            pref[e.num] = ask(0, 0, MAXSIZE, e.y1, e.y2 + 1);
+//        } else if(e.type == 1) {
+//            add(0, 0, MAXSIZE, e.y1);
+//        } else {
+//            ans[e.num] = ask(0, 0, MAXSIZE, e.y1, e.y2 + 1) - pref[e.num];
+//        }
+//    }
+//    return 0;
+//}
+
+
+
+
+
