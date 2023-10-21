@@ -1,3 +1,4 @@
+//#define _USE_MATH_DEFINES
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -9,82 +10,91 @@
 #include <cmath>
 #include <random>
 #include <unordered_map>
+#include <stack>
+#include <fstream>
+#include <queue>
+typedef long double ld;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef unsigned int uint;
 #define all(a) a.begin(), a.end()
-
+#define null nullptr
+#define Fin ios_base::sync_with_stdio(false); cin.tie(null); cout.precision(40);
 using namespace std;
 
 const double eps = 1e-7;
-const int INF = 1e9;
-const int MAXSIZE = 1e5 + 5;
-const int LOG = 17;
-typedef long double ld;
-typedef long long ll;
+const int INF = 1e9 + 9;
+const ull UINF = (ull)1e17 + 7;
+const int SIZE = 1e5 + 6;
+const int MOD = 1e9 + 7;
+const int BASE = 256;
 
 
-int n, m;
-vector<int> used;
-vector<vector<int>> gr;
-vector<int> pr;
-
-bool kuhn(int v, int timer) {
-    used[v] = timer;
-    for(int u: gr[v]) {
-        if (pr[u] == -1 || used[pr[u]] != timer && kuhn(pr[u], timer)) {
-            pr[u] = v;
-            return true;
-        }
+inline ostream& operator << (ostream& out, vector<uint>& a) {
+    for (auto i: a) {
+        out << i << ' ';
     }
-//    for(int u : gr[v]) {
-//        if(!used[pr[u]] && kuhn(pr[u])) {
-//            pr[u] = v;
-//            return true;
-//        }
-//    }
-    return false;
+    return out;
 }
 
+inline ostream& operator << (ostream& out, vector<int>& a) {
+    for (auto i: a) {
+        out << i << ' ';
+    }
+    return out;
+}
 
+inline ostream& operator << (ostream& out, vector<char>& a) {
+    for (auto i: a) {
+        if (i != '\000')
+            out << i;
+    }
+    return out;
+}
 
+uint cur = 0;
+
+uint nextRand24(uint a, uint b) {
+    cur = cur * a + b;
+    return cur >> 8;
+}
+
+uint nextRand32(uint A, uint B) {
+    uint a = nextRand24(A, B), b = nextRand24(A, B);
+    return ((a << 8) ^ b);
+}
+
+vector<uint> gen(uint n, uint a, uint b) {
+    vector<uint> arr(n);
+    for (int i = 0; i < n; ++i) {
+        arr[i] = nextRand32(a, b);
+    }
+    return arr;
+}
+
+ull dist_calc(vector<uint>& arr, ull y) {
+    ull c = 0;
+    for (auto &i: arr)c += abs((ll)y - (ll)i);
+
+    return c;
+}
+
+void solve() {
+    int n;
+    cin >> n;
+    int a, b;
+    cin >> a >> b;
+    auto arr = gen(n, a, b);
+    ull c = 0;
+    for (auto &i: arr) c += i;
+    c /= (int)(arr.size());
+    cout << dist_calc(arr, c) << '\n';
+}
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    cin >> n >> m;
-    gr.resize(n);
-    used.resize(n);
-    pr.resize(n, -1);
-    for(int i = 0; i < m; ++i) {
-        int u, v;
-        cin >> u >> v   ;
-        gr[u - 1].push_back(v - 1);
-    }
-    used.assign(n, -1);
-    for(int i = 0; i < n; ++i) {
-        kuhn(i, i);
-    }
-    vector<int> prl(n, -1);
-    for(int i = 0; i < n; ++i) {
-        if (pr[i] != -1) {
-            prl[pr[i]] = i;
-        }
-    }
-    vector<vector<int>> paths;
-    for (int i = 0; i < n; ++i) {
-        if(pr[i] == -1) {
-            int cur = i;
-            paths.push_back(vector<int>());
-            while (cur != -1) {
-                paths.back().push_back(cur);
-                cur = prl[cur];
-            }
-        }
-    }
-    cout << paths.size() << '\n';
-    for (auto& p: paths) {
-        for(int& i : p) {
-            cout << i + 1 << ' ';
-        }
-        cout << '\n';
-    }
+    Fin
+    cout << nextRand32(239, 13);
+    solve();
+    return 0;
 }
+

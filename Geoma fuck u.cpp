@@ -131,8 +131,29 @@
 //
 //#include <iostream>
 //#include <vector>
+//#include <chrono>
+//#include <string>
 //#include <algorithm>
+//#include <numeric>
+//#include <map>
+//#include <set>
 //#include <cmath>
+//#include <random>
+//#include <unordered_map>
+//#include <stack>
+//typedef long double ld;
+//typedef long long ll;
+//#define all(a) a.begin(), a.end()
+//#define null nullptr
+//
+//using namespace std;
+//
+//const double eps = 1e-7;
+//const int INF = 1e9;
+//const int SIZE = 1e5 + 5;
+//const int MOD = 1e9;
+//typedef long long ll;
+//
 //
 //using namespace std;
 //
@@ -205,8 +226,6 @@
 //inline double aangle(const Point& a, const Point& b) {
 //    return abs(angle(a, b));
 //}
-//
-//const double eps = 1e-8;
 //
 //inline bool eq(double a, double b) {
 //    return abs(a - b) < eps;
@@ -320,6 +339,20 @@
 //    } else {
 //        return true;
 //    }
+//}
+//int main() {
+//    ios_base::sync_with_stdio(0);
+//    cin.tie(0);
+//    cout.tie(0);
+//    int n;
+//    Point pt;
+//    cin >> n >> pt;
+//    vector<Point> p(n);
+//    for (int i = 0; i < n; ++i) {
+//        cin >> p[i];
+//    }
+//    cout << (pointInPolygon(p, pt) ? "YES" : "NO") << '\n';
+//    return 0;
 //}
 //
 //bool pointInConvexPolygon(const vector<Point>& p, const Point& pt) {

@@ -17,7 +17,7 @@
 //    ios_base::sync_with_stdio(false);
 //    cin.tie(0);
 //    int n, W;
-//    cin >> n >> W;
+//    cin >> W >> n;
 //    vector<int> a(n);
 //    for (int i = 0; i < n; ++i) {
 //        cin >> a[i];
@@ -42,15 +42,7 @@
 //        }
 //    }
 //    vector<int> ans;
-//    cout << maxx << '\n';
-//    while (maxx > 0) {
-//        ans.push_back(p[maxx]);
-//        maxx -= p[maxx];
-//    }
-//    for (int i : ans) {
-//        cout << i << ' ';
-//    }
-//    return 0;
+//    cout << maxx - 1  << '\n';
 //}
 
 

@@ -50,7 +50,7 @@
 
 
 
-// востановление ответа
+// востановление ответа работает не очень
 //#include <iostream>
 //#include <algorithm>
 //#include <vector>

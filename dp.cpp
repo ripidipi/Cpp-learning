@@ -263,3 +263,84 @@
 //    cout << dp[n].first + dp[n].second;
 //    return 0;
 //}
+
+
+
+//#include <iostream>
+//#include <vector>
+//#include <chrono>
+//#include <string>
+//#include <algorithm>
+//#include <numeric>
+//#include <map>
+//#include <set>
+//#include <cmath>
+//#include <random>
+//#include <unordered_map>
+//#include <stack>
+//typedef long double ld;
+//typedef long long ll;
+//#define all(a) a.begin(), a.end()
+//#define null nullptr
+//
+//using namespace std;
+//
+//const double eps = 1e-7;
+//const int INF = 1e9;
+//const int SIZE = 1e5 + 5;
+//const int MOD = 1e9;
+//typedef long long ll;
+//
+//inline ostream& operator << (ostream& out, vector<int>& a) {
+//    for (int i: a) {
+//        out << i << ' ';
+//    }
+//    return out;
+//}
+//
+//
+//int q(vector<int>& arr, int k) {
+//    int n = arr.size();
+//    vector<vector<vector<int>>> dp(n + 1, vector<vector<int>>(k + 1, vector<int>(3, 0)));
+//    for (int i = 1; i <= n; ++i) {
+//        for (int j = 0; j <= k; ++j) {
+//            for (int t = 0; t < 3; ++t) {
+//                dp[i][j][t] = max(dp[i][j][t], dp[i - 1][j][t] + (arr[i - 1] == t));
+//                for (int prevType = 0; prevType < 3; prevType++) {
+//                    if (t != prevType && j > 0) {
+//                        dp[i][j][t] = max(dp[i][j][t], dp[i - 1][j - 1][prevType] + (arr[i - 1] == t));
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    int maxC = 0;
+//    for (int t = 0; t < 3; t++) {
+//        maxC = max(maxC, dp[n][k][t]);
+//    }
+//    return maxC;
+//}
+//
+//
+//int main() {
+//    ios_base::sync_with_stdio(0);
+//    cin.tie(0);
+//    cout.tie(0);
+//    int n, k;
+//    cin >> n >> k;
+//    // M - 0, P - 1, G - 2
+//    vector<int> arr(n);
+//    for (int i = 0; i < n; ++i) {
+//        char cur;
+//        cin >> cur;
+//        if (cur == 'M') {
+//            arr[i] = 0;
+//        } else if (cur == 'P') {
+//            arr[i] = 1;
+//        } else {
+//            arr[i] = 2;
+//        }
+//    }
+//    cout << q(arr, k) << endl;
+//    return 0;
+//}

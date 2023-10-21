@@ -867,12 +867,12 @@
 //    tr[v] = max(tr[2 * v + 1], tr[2 * v + 2]);
 //}
 //
-//int get_(int v, int askl, int askr, int l, int r) {
+//pair<int, int> get_(int v, int askl, int askr, int l, int r) {
 //    if (l >= askr || r <= askl) {
-//        return -INF;
+//        return make_pair(-INF, -INF);
 //    }
 //    if (l <= askl && r >= askr) {
-//        return tr[v];
+//        return make_pair(tr[v], l);
 //    }
 //    int m = (askl + askr) / 2;
 //    auto res1 = get_(2 * v + 1, askl, m, l, r);
@@ -908,15 +908,6 @@
 //    int m;
 //    cin >> m;
 //    for (int i = 0; i < m; ++i) {
-//        char type;
-//        int l, r;
-//        cin >> type >> l >> r;
-//        l --;
-//        if (type == 's') {
-//            cout << get_(0, 0, n, l, r) << '\n';
-//        } else {
-//            change(0, 0, n, l, r);
-//        }
 //    }
 //    return 0;
 //}
