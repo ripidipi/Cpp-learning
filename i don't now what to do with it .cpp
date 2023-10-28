@@ -691,7 +691,7 @@
 //    cur_ans = ((int)res.size() - q_open(res, stk) - 1 <
 //               (int)cur_ans.size() ? cur_ans : res);
 ////    }
-//    if ((int)cur_ans.size() == 0) {
+//    if ((int)cur_ans.size() == 0 || (int)cur_ans.size() == 1) {
 //        cout << "\n";
 //        return;
 //    }
